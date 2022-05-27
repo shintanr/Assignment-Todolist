@@ -22,6 +22,8 @@ if(isset($_GET['delete'])){
     $query = mysqli_query($connection, "DELETE FROM tasks WHERE task_id = '$task_id'");
     header("Location: AssignmentTodo.php");
 }
+
+
 ?>
 
 
@@ -113,7 +115,7 @@ if(isset($_GET['delete'])){
                             <?php echo $row['task_name']?>
 
                             <div class="float-right">
-                                    <span class="badge badge-warning" <?php echo $row['task_status'] ?>>selesai</span>
+                                    <span class="badge badge-warning" <?php echo $row['task_status'] ?>>done</span>
                             </div>
                             </li>
                             <?php } ?>
