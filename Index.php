@@ -1,21 +1,21 @@
 <?php
-	//start session
+	//memulai session
 	session_start();
  
-	//redirect if logged in
+	//redirect jika ingin login
 	if(isset($_SESSION['user'])){
-		header('location:home.php');
+		header('location:Index.php');
 	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PHP Login using OOP Approach</title>
+	<title>Login Todo</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-	<h1 class="page-header text-center">PHP Login using OOP Approach</h1>
+	<h1 class="page-header text-center">Login Todo</h1>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
 		    <div class="login-panel panel panel-primary">
@@ -40,7 +40,7 @@
 		    <?php
 		    	if(isset($_SESSION['message'])){
 		    		?>
-		    			<div class="alert alert-info text-center">
+		    			<div class="alert alert-info text-right">
 					        <?php echo $_SESSION['message']; ?>
 					    </div>
 		    		<?php
