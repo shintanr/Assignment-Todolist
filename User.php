@@ -1,5 +1,5 @@
 <?php
-include_once('DbConnection.php');
+include_once('DatabaseLogin.php');
  
 class User extends DbConnection{
  
