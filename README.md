@@ -27,4 +27,8 @@ masalah yang ada
 - sudah mencoba untuk mengimplementasikan class untuk koneksi database dan koneksi ke file AssignmentTodo.php tapi selalu mendapat error jadi saya memutuskan untuk meniadakan saja
 
 
+username: shintanr
+password: yaallahsemogajadi
+
+
 
