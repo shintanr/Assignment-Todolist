@@ -1,6 +1,6 @@
 
 <?php
-include 'db.php';
+include 'DatabaseTodo.php';
 ?>
 
 <?php
@@ -41,7 +41,7 @@ if(isset($_GET['delete'])){
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"> <i class="bi bi-bag-fill"></i>TO DO</a>
+            <a class="navbar-brand" href="#"> <i class="bi bi-bag-fill"></i>TO-DO</a>
         </div>
     </nav>
     <!-- Akhir Navbar -->
@@ -64,16 +64,16 @@ if(isset($_GET['delete'])){
             <div class="col-md-6">
                 <div class="card shadow-lg border-0">
                     <div class="card-body">
-                        <h3>What's your task?</h3>
+                        <h3>Ada tugas apa nih?</h3>
                         <form method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="task_name" placeholder="input task">
+                            <input type="text" class="form-control" name="task_name" placeholder="masukkan tugas">
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="add_post" class="btn btn-secondary btn-block">Add Task</button>
+                            <button type="submit" name="add_post" class="btn btn-secondary btn-block">Tambah Tugas</button>
                         </div>
                         </form>
-                        <h3>Pending Tasks</h3>
+                        <h3>Antrean tugas </h3>
                         <ul class="list-group">
                             <?php
                             $query = mysqli_query($connection, "SELECT * FROM tasks WHERE task_status = 'pending' ");
@@ -105,7 +105,7 @@ if(isset($_GET['delete'])){
             <div class="col-md-6">
                 <div class="card shadow-lg border-0">
                     <div class="card-body">
-                        <h3>Hurray, done!</h3>
+                        <h3>Yey, selesai!</h3>
                         <ul class="list-group">
                             <?php 
                             $query = mysqli_query($connection, "SELECT * FROM tasks WHERE task_status = 'selesai' ");
@@ -115,7 +115,7 @@ if(isset($_GET['delete'])){
                             <?php echo $row['task_name']?>
 
                             <div class="float-right">
-                                    <span class="badge badge-warning" <?php echo $row['task_status'] ?>>done</span>
+                                    <span class="badge badge-warning" <?php echo $row['task_status'] ?>>selesai</span>
                             </div>
                             </li>
                             <?php } ?>
