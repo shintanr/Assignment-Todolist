@@ -14,7 +14,7 @@ if(isset($_POST['login'])){
  
 	if(!$auth){
 		$_SESSION['message'] = 'Invalid username or password';
-    	header('location:index.php');
+    	header('location:indexLogin.php');
 	}
 	else{
 		$_SESSION['user'] = $auth;
@@ -23,6 +23,6 @@ if(isset($_POST['login'])){
 }
 else{
 	$_SESSION['message'] = 'You need to login first';
-	header('location:index.php');
+	header('location:indexLogin.php');
 }
 ?>
