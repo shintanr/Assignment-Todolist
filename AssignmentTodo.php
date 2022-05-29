@@ -17,6 +17,7 @@ if(isset($_GET['edit'])){
     header("Location: AssignmentTodo.php");
 }
 
+
 if(isset($_GET['delete'])){
     $task_id = $_GET['delete'];
     $query = mysqli_query($connection, "DELETE FROM tasks WHERE task_id = '$task_id'");
@@ -80,11 +81,12 @@ if(isset($_GET['delete'])){
                             while($row = mysqli_fetch_array($query)){
                                 $task_id = $row['task_id'];
                                 $task_name = $row['task_name'];
+                                
                             ?>
                             <li class="list-group-item">
                                 <?php echo $task_name; ?>
                                 <div class="float-right">
-                                    <a href="AssignmentTodo.php?edit= <?php echo $task_id ?>" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="add todo">
+                                    <a href="AssignmentTodo.php?edit= <?php echo $task_id ?>" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="done todo">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                 <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                                 </svg>
@@ -111,6 +113,7 @@ if(isset($_GET['delete'])){
                             $query = mysqli_query($connection, "SELECT * FROM tasks WHERE task_status = 'selesai' ");
                             while($row = mysqli_fetch_array($query)){
                             ?>
+
                             <li class="list-group-item">
                             <?php echo $row['task_name']?>
 
@@ -136,7 +139,7 @@ if(isset($_GET['delete'])){
 <!-- Akhir body -->
     
 <!-- Footer -->
-    <footer class="bg-dark text-white text-center pb-5 fixed-bottom">
+    <footer class="bg-dark text-white text-center pb-5">
         <p>Created with <3 <i class="bi bi-heart-fill"></i> by
             <a href="https://github.com/shintanr" class="text-white fw-bold" target="_blank"><u>Shinta Nurrohmah</u></a>
         </p>
