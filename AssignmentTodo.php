@@ -141,7 +141,7 @@ if(isset($_GET['delete'])){
 <!-- Footer -->
     <footer class="bg-dark text-white text-center pb-5">
         <p>Created with <3 <i class="bi bi-heart-fill"></i> by
-            <a href="https://github.com/shintanr" class="text-white fw-bold" target="_blank"><u>Shinta Nurrohmah</u></a>
+            <a href="https://github.com/shintanr/TA_DKP_SHINTA-NURROHMAH_21120121140093_ASSIGNMENT-TODOLIST" class="text-white fw-bold" target="_blank"><u>Shinta Nurrohmah</u></a>
         </p>
     </footer>
 <!-- Akhir Footer -->
